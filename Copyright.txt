@@ -1,0 +1,6 @@
+
+The data files and libraries are redistributed in this repo for convenience.
+
+These files are from: https://introcs.cs.princeton.edu/java/
+
+As the website notes, the files are copyrighted by Robert Sedgewick and Kevin Wayne.
