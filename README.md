@@ -1,5 +1,6 @@
 # cs1
-Repository for the CS1 course I am teaching.  This has a sample project "code", with a setup for intelliJ (which includes a template for class homework/projects), and some data files/stdlib.jar.  
+Repository for the CS1 course I am teaching.  This has a sample project "code", with a setup for intelliJ 
+(which includes a template for class homework/projects), and some data files and libraries.  
 
 To use this repository:
 
