@@ -25,9 +25,11 @@ public class Chaos {
     public static void main(String args[]) {
 
         int trials = Integer.parseInt(args[0]);
-        double[] dist = ArrayIO.read1D();
-        double[][] cx = ArrayIO.read2D();
-        double[][] cy = ArrayIO.read2D();
+	// TODO: Use the ArrayIO library to read in the inputs
+	// Update the following 3 lines.
+	double[] dist;
+	double[][] cx;
+	double[][] cy;
 
         StdDraw.setXscale(-0.25, 1.25);
         StdDraw.setYscale(-0.25, 1.25);
