@@ -25,6 +25,11 @@ The following is a hint at what you will need to compute forces.
                   r[i][j] = Math.sqrt((px[i] - px[j]) * (px[i] - px[j]) + (py[i] - py[j]) * (py[i] - py[j]));
                   // Compute the force between i and j
                   pairwiseForces[i][j] = (G * mass[i] * mass[j]) / (r[i][j] * r[i][j]) ;
+		  // Note that the force between i and j is in the opposite direction of
+		  // of the force between j and i.
+		  if (j > i)
+		  	// flip the sign
+		  	pairwiseForces[i][j] *= -1.0;
             }
 
        	  for (int i = 0; i < N; i++) {
