@@ -3,7 +3,7 @@
  *
  *  Description: 
  *
- *  Determines whether a a DNA string corresponds to a potential gene
+ *  Determines whether a DNA string corresponds to a potential gene
  *      - length is a multiple of 3
  *      - starts with the start codon (ATG)
  *      - ends with a stop codon (TAA or TAG or TGA)
@@ -24,25 +24,24 @@ public class PotentialGene {
         // Length is a multiple of 3.
         if (dna.length() % 3 != 0) return false;
 
-        // Starts with start codon.
-        if (!dna.startsWith("ATG")) return false;
+        // Starts with start codon. Otherwise, return 
 
-        // No intervening stop codons.
+        // No intervening stop codons:  Iteratively, construct codon by staring 
+	// with the 3rd character:
+	//    -- Each codon is a substring of length 3.  
+	//    -- If any of the codons equal stop codon, we got an intervening stop codon
+	//       and hence, string is not a potential gene.
         for (int i = 3; i < dna.length() - 3; i++) {
             if (i % 3 == 0) {
-                String codon = dna.substring(i, i+3);
-                if (codon.equals("TAA")) return false;
-                if (codon.equals("TAG")) return false;
-                if (codon.equals("TGA")) return false;
+	        // Construct codon of length 3 and check
             }
         }
 
-        // Ends with a stop codon.
-        if (dna.endsWith("TAA")) return true;
-        if (dna.endsWith("TAG")) return true;
-        if (dna.endsWith("TGA")) return true;
+        // Ends with a stop codon.  If it does, return true.
 
-        return false;
+
+	// Didn't end with a stop codon.
+	return false;
     }
 
 
