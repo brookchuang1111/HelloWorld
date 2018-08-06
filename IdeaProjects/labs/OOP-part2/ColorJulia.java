@@ -3,11 +3,11 @@
  *
  * Description:  Plots the Julia set for the complex point c = a + ib.
  *
- *  % java ColorJulia -0.75 0.1
+ *  % java ColorJulia -0.75 0.1 < data/datatype/mandel.txt
  *
- *  % java ColorJulia -1.25 0
+ *  % java ColorJulia -1.25 0 < data/datatype/mandel.txt
  *
- *  % java ColorJulia 0.1 0.7
+ *  % java ColorJulia 0.1 0.7 < data/datatype/mandel.txt
  *
  */
 
@@ -18,7 +18,7 @@ public class ColorJulia {
     // return number of iterations to check z is in the Julia set of c
     static int julia(Complex c, Complex z, int maximumIterations) {
         // TODO: Iterate at most maximumIterations times, and return early if |z|
-        // diverges: |z| > 2.0; return t
+        // diverges: |z| > 2.0; return t, where t is the loop variable.
         // In each iteration, set z = z^2 + c
 
         return maximumIterations - 1;
