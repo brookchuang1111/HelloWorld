@@ -37,8 +37,8 @@ public class Universe {
             double mass = StdIn.readDouble(); 
             double[] position = { rx, ry }; 
             double[] velocity = { vx, vy }; 
-            Vector r = new Vector(position); 
-            Vector v = new Vector(velocity); 
+            SpatialVector r = new SpatialVector(position); 
+            SpatialVector v = new SpatialVector(velocity); 
             bodies[i] = new Body(r, v, mass); 
         } 
     } 
@@ -47,9 +47,9 @@ public class Universe {
     public void increaseTime(double dt) {
 
         // initialize the forces to zero
-        Vector[] f = new Vector[n];
+        SpatialVector[] f = new SpatialVector[n];
         for (int i = 0; i < n; i++) {
-            f[i] = new Vector(new double[2]);
+            f[i] = new SpatialVector(new double[2]);
         }
 
         // compute the forces and apply principle of superposition
