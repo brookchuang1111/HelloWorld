@@ -5,9 +5,9 @@
  *  by the standard input stream, increasing time at the rate on the
  *  command line.
  *
- *  Execution:    java Universe dt < input.txt
+ *  Execution:    java Universe dt "input.txt"
  *
- *  %  java Universe 25000 < data/nbody/planets.txt
+ *  %  java Universe 25000 "data/nbody/planets.txt"
  *
  *
  ******************************************************************************/
@@ -16,25 +16,26 @@ public class Universe {
     private final int n;             // number of bodies
     private final Body[] bodies;     // array of n bodies
 
-    // read universe from standard input
-    public Universe() {
+    // read universe from file
+    public Universe(String filename) {
 
-        // number of bodies
-        n = StdIn.readInt(); 
+	// TODO: Use BufferedReader to open the file
+
+        // TODO: read number of bodies
 
         // the set scale for drawing on screen
-        double radius = StdIn.readDouble(); 
+        double radius = ______;
         StdDraw.setXscale(-radius, +radius); 
         StdDraw.setYscale(-radius, +radius); 
 
         // read in the n bodies
         bodies = new Body[n]; 
         for (int i = 0; i < n; i++) { 
-            double rx   = StdIn.readDouble(); 
-            double ry   = StdIn.readDouble(); 
-            double vx   = StdIn.readDouble(); 
-            double vy   = StdIn.readDouble(); 
-            double mass = StdIn.readDouble(); 
+            double rx   = ______;
+            double ry   = ______;
+            double vx   = ______;
+            double vy   = ______;
+            double mass = ______;
             double[] position = { rx, ry }; 
             double[] velocity = { vx, vy }; 
             SpatialVector r = new SpatialVector(position); 
@@ -77,8 +78,8 @@ public class Universe {
 
     // client to simulate a universe
     public static void main(String[] args) {
-        Universe newton = new Universe();
         double dt = Double.parseDouble(args[0]);
+        Universe newton = new Universe(args[1]);
         StdDraw.enableDoubleBuffering();
         while (true) {
             StdDraw.clear(); 
