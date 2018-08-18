@@ -1,0 +1,16 @@
+Boston Bruins,42-31-9
+Pittsburgh Penguins,48-26-8
+New York Islanders,45-27-10
+Carolina Hurricanes,35-31-16
+Columbus Blue Jackets,34-40-8
+Montreal Canadiens,38-38-6
+Tampa Bay Lightning,46-31-5
+Washington Capitals,56-18-8
+New Jersey Devils,38-36-8
+Ottawa Senators,38-35-9
+Buffalo Sabres,35-36-11
+Philadelphia Flyers,41-27-14
+Florida Panthers,47-26-9
+Toronto Maple Leafs,29-42-11
+Detroit Red Wings,41-30-11
+New York Rangers,46-27-9
